@@ -28,6 +28,7 @@ header a, header h2{
 }
 header a:hover {
     text-decoration: underline;
+    color: #9340FF;
 }
 #main-apresent{
     display: flex;
