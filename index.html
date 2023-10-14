@@ -9,12 +9,29 @@
 </head>
 <body>
     <header>
-        <h2>Portifolio</h2>
-        <div id="header-flex">
-            <a href="#header-flex">Inicio</a>
-            <a href="#main-sobre">Sobre mim</a>
-            <a href="#main-projetos">Projetos</a>
-            <a href="#main-habilidades">Habilidades</a>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>Portifolio</h1>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#main-sobre" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#main-projetos" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="#main-habilidades" class="nav-link">habilidadades</a></li>
+                </ul>
+            </div>
+            <div class="hamb">
+                <button onclick="menu()"><img src="menu_white_36dp (1).svg" alt="" class="icon"></button>
+            </div>
+        </nav>
+        <div class="menu-mobile">
+            <ul>
+                <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="#main-sobre" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#main-projetos" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#main-habilidades" class="nav-link">habilidadades</a></li>
+            </ul>
         </div>
     </header>
 
@@ -141,5 +158,17 @@
             }
         });
     });</script>
+    <script>
+        function menu() {
+            let menu = document.querySelector('.menu-mobile');
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                document.querySelector('.icon').src = "menu_white_36dp (1).svg"
+            } else {
+                menu.classList.add('open')
+                document.querySelector('.icon').src = "close_white_36dp.svg"
+            }
+        }
+    </script>
 </body>
 </html>
