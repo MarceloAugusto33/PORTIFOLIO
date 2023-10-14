@@ -189,6 +189,20 @@ footer{
         font: normal 2em arial;
         margin-top: 200px;
     }
+    header{
+        padding: 8px;
+        background-color: #27282c;
+    }
+    .card-pjt{
+        background-color: #3e4047;
+    }
+    .card-pjt button{
+        border-color: #9340FF;
+        background-color: #9340FF;
+    }
+    .card-pjt button:hover{
+        border-color: #9340ff04;
+        background-color: #421f70;
+    }
 }
-
 
