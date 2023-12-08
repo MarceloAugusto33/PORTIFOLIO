@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #13151b;
+    color: white;
+}
+header{
+    background-color: rgb(24, 26, 26);
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+.nav > ul{
+    display: flex;
+}
+.nav > ul > li{
+    margin: 0px 20px;
+    list-style: none;
+}
+.nav-item > a{
+    text-decoration: none;
+    color: white;
+}
+.flex-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+    gap: 1%;
+}
+.container-perfil{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    left: 0;
+    top: 100px;
+    height: 100%;
+}
+.foto{
+    width: 100%;
+}
+.foto > img{
+    width: 90%;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+}
+.dados{
+    margin-top: 10px;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dados > p {
+    font-size: 1.5em
+}
+.dados > h2{
+    font-size: 2em;
+}
+.dados > p > span{
+    color: #9340FF;
+}
+.social-botoes{
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.social-botoes > a{
+    width: 45%;
+    padding: 1rem;
+    border: 1px solid #9340FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s;
+}
+.social-botoes > a:hover{
+    background-color: #9340FF;
+}
+.container-portifolio{
+    width: 55%;
+}
+.container-portifolio > h1{
+    text-align: center;
+    color: #9340FF;
+    font-size: 2.5em;
+    margin: 20px 0px 30px 0px;
+}
+.container-portifolio > p{
+    font-size: 1.2rem;
+    text-indent: 40px;
+    margin: 30px auto;
+    width: 70%;
+}
+.container-projeto{
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    width: 70%;
+    margin: 40px auto;
+    background-color: rgb(34, 32, 32);
+    border-radius: 12px;
+    box-shadow: 3px 4px 0px#9340ff;
+
+}
+.card > h2{
+    text-align: center;
+    margin: 20px 0px;
+}
+.card > img{
+    width: 90%;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+}
+.card > p{
+    margin: 20px 0px;
+    font-size: 1.2rem;
+    text-indent: 40px;
+}
+.botoes-projeto{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.botoes-projeto > a{
+    width: 30%;
+    padding: 1rem;
+    border: 2px solid #9340FF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 20px 0px;
+    color: white;
+    transition: all 0.3s;
+}
+.botoes-projeto > a:hover{
+    background: #9340FF;
+}
+.container-habilidades{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    align-items: center;
+    justify-content: center;
+}
+.card-habilidade{
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.304);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.card-habilidade > img{
+    height: 150px;
+    padding: 0.6rem;
+}
+footer{
+    background-color: rgb(24, 26, 26);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer > h1{
+    margin: 20px 0px;
+    font-size: 1.5em;
+}
+.nav-mobile{
+    display: none;
+}
+.overlay{
+    display: block;
+}
+.overlay{
+    width: 0;
+    height: 100%;
+    background-color: #9340FF;
+    z-index: 9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+.overlay-content{
+    position: relative;
+    top:25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+
+}
+.overlay-content a{
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 25px;
+}
+.overlay a:hover, .overlay a:focus{
+    color: rgb(166, 166, 166);
+}
+.overlay .closebtn{
+    position: absolute;
+    top: 4%;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+}
+@media screen and (max-width:800px){
+    .nav-bar{
+        padding: 1.5rem;
+    }
+    .nav-mobile > img{
+        width: 100%;
+        height: 30px;
+        cursor: pointer;
+    }
+    .nav-mobile{
+        display: block;
+    }
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-perfil{
+        top: 0;
+        width: 100%;
+        position: static;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-portifolio{
+        width: 100%;
+        height: auto;
+    }
+    .nav{
+        display: none;
+    }
+    .container-portifolio > p{
+        width: 90%;
+        text-indent: 0;
+    }
+    .card{
+        width: 90%;
+    }
+    .card > p {
+        text-indent: 0;
+        padding: 1rem;
+    }
+    .card-habilidade{
+        width: 120px;
+        height: 150px;
+    }
+    .card-habilidade > img{
+        width: 100%;
+    }
+    .card-habilidade > h3{
+        font-size: 1rem;
+    }
+    footer h1{
+        text-align: center;
+    }
+    .overlay{
+        width: 0;
+        height: 100%;
+        background-color: #9340FF;
+        z-index: 9;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow-x: hidden;
+        transition: all 0.5s;
+    }
+    .overlay-content{
+        position: relative;
+        top:25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    
+    }
+    .overlay-content a{
+        padding: 8px;
+        text-decoration: none;
+        color: white;
+        display: block;
+        font-size: 25px;
+    }
+    .overlay a:hover, .overlay a:focus{
+        color: rgb(166, 166, 166);
+    }
+    .overlay .closebtn{
+        position: absolute;
+        top: 4%;
+        right: 45px;
+        font-size: 60px;
+        color: white;
+    }
+
+}
+
+

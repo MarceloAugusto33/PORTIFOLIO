@@ -3,165 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Portifolio</title>
-    <link rel="shortcut icon" href="icons8-portfolio-16 (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/portifolio.css">
+    <title>Portifolio Marcelo</title>
 </head>
 <body>
+    <div class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content" id="sair">
+            <a href="#">Inicio</a>
+            <a href="#link-sobre">Sobre</a>
+            <a href="#link-projetos">Projetos</a>
+            <a href="#link-habilidades">Habilidades</a>
+        </div>
+    </div>
     <header>
-        <nav class="nav-bar" id="topo">
+       <nav class="nav-bar">
             <div class="logo">
                 <h1>Portifolio</h1>
             </div>
-            <div class="nav-list">
+            <div class="nav">
                 <ul>
-                    <li class="nav-item"><a href="#topo" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="#main-sobre" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="#main-projetos" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="#main-habilidades" class="nav-link">habilidadades</a></li>
+                    <li class="nav-item"><a href="#">Inicio</a></li>
+                    <li class="nav-item"><a href="#link-sobre">Sobre</a></li>
+                    <li class="nav-item"><a href="#link-projetos">Projetos</a></li>
+                    <li class="nav-item"><a href="#link-habilidades">Habilidades</a></li>
                 </ul>
             </div>
-            <div class="hamb">
-                <button onclick="menu()"><img src="menu_white_36dp (1).svg" alt="" class="icon"></button>
+            <div class="nav-mobile" onclick="openNav()">
+                <img src="src/icons/menu-svgrepo-com.svg" alt="">
             </div>
-        </nav>
-        <div class="menu-mobile">
-            <ul>
-                <li class="nav-item"><a href="#topo" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="#main-sobre" class="nav-link">Sobre</a></li>
-                <li class="nav-item"><a href="#main-projetos" class="nav-link">Projetos</a></li>
-                <li class="nav-item"><a href="#main-habilidades" class="nav-link">habilidadades</a></li>
-            </ul>
-        </div>
+       </nav>
     </header>
-
-    <main>
-        <section id="main-apresent">
-            <div id="apresent">
-                <p>Oi, eu sou </p>
+    <section class="flex-container">
+        <article class="container-perfil">
+            <div class="foto">
+                <img src="src/img/fotoperfil.png" alt="">
+            </div>
+            <div class="dados">
+                <p>Oi, eu sou</p>
                 <h2>Marcelo Augusto</h2>
                 <p>Desenvolvedor <span>Front-end</span></p>
-                <a href="https://www.linkedin.com/in/marcelo-augusto-8bb411271" target="_blank"><button class="linkedin">Linkedin</button></a>
-                <a href="https://github.com/MarceloAugusto33" target="_blank"><button class="github">Github</button></a>
-            </div>
-            <div id="apresent-img">
-                <img src="IMG_20220915_205005_115.jpg" alt="Minha Imagem">
-            </div>
+                <div class="social-botoes">
+                    <a href="#">Linkedin</a>
+                    <a href="#">Github</a>
+                </div>
 
-        </section>
-        <section id="main-sobre">
-            <h2>Sobre</h2>
+            </div>
+        </article>
+        <main class="container-portifolio">
+            <h1 id="link-sobre">Sobre mim</h1>
             <p>
                 Meu nome é Marcelo Augusto tenho 18 anos e sou apaixonado por tecnologia desde criança, Meu primeiro contato com a programação foi com C# em 2020, enquanto ainda estava no ensino medio. Apesar de ter gostado da area, comecei a dar o devido foco em 2023 quando entrei na UNAMA para fazer ADS.
-            </p>
+            </p> 
             <p>
                 Estou estudando todos os dias há 4 meses e estou aprimorando as minhas habilidades e minha comunicaçao, atualmente estou fazendo cursos online de front-end e back-end.
             </p>
             <p>
                 Hoje eu ja entendo Tecnologias voltadas para front-end e tambem gosto de "Brincar" com minhas habilidades para criar telas para projetos pessoais e familiares.
             </p>
-        </section>
-        <section id="main-projetos">
-            <h2><span>Projetos</span></h2>
-            <div id="card-flex">
-                <div class="card-pjt">
-                    <p><span>PROJETO ACMELLA</span></p>
-                    <img src="Captura de tela 2023-10-13 230322.png" alt="" class="ft-pj">
-                    <p>Projeto de site institucional proposto pelo professor Willys campos na UNAMA</p>
-                    <p>TECNOLOGIAS UTILIZADAS:</p>
-                    <p>
-                        <img src="html-svgrepo-com.svg" alt="">
-                        <img src="css-3-svgrepo-com.svg" alt="">
-                        <img src="javascript-svgrepo-com.svg" alt="">
-                        <img src="bootstrap-svgrepo-com.svg" alt="">
-                    </p>
-                    <div class="links-card">
-                        <a href="https://github.com/MarceloAugusto33/ECO-PROJETO" target="_blank"><button>GITHUB</button></a>
-                        <a href="https://eco-projeto--sjsjsjmarcelo.repl.co/" target="_blank"><button>PROJETO</button></a>
+            <h1>Projetos</h1>
+            <div class="container-projeto" id="link-projetos">
+                <div class="card">
+                    <h2>Calculadora Virtual</h2>
+                    <img src="src/img/projeto-calculadora.png" alt="">
+                    <p>Esse projeto é uma calculadora simples totalmente funcional criada com HTML, CSS e JavaScript. Este projeto foi concebido como parte do meu aprendizado contínuo em JavaScript e para aprimorar minhas habilidades de desenvolvimento front-end.</p>
+                    <div class="botoes-projeto">
+                        <a href="#">GITHUB</a>
+                        <a href="#">PROJETO</a>
                     </div>
                 </div>
-                <div class="card-pjt">
-                    <p><span>PROJETO API CEP</span></p>
-                    <img src="Captura de tela 2023-10-13 225927.png" alt="" class="ft-pj">
-                    <p>Projeto De um website pegando dados de um api e mostrando o endereço, proposto pelo professor Mauricio na UNAMA</p>
-                    <p>TECNOLOGIAS UTILIZADAS:</p>
-                    <p>
-                        <img src="html-svgrepo-com.svg" alt="">
-                        <img src="css-3-svgrepo-com.svg" alt="">
-                        <img src="javascript-svgrepo-com.svg" alt="">
-                    </p>
-                    <div class="links-card">
-                        <a href="https://github.com/MarceloAugusto33/Projeto-API-CEP" target="_blank"><button>GITHUB</button></a>
-                        <a href="https://marceloaugusto33.github.io/Projeto-API-CEP/" target="_blank"><button>PROJETO</button></a>
+                <div class="card">
+                    <h2>Landing Page naruto</h2>
+                    <img src="src/img/projeto-naruto.png" alt="">
+                    <p>Projeto de uma landing page de naruto, para botar meus conhechecimentos novos em pratica, como flex-box e javascript.</p>
+                    <div class="botoes-projeto">
+                        <a href="#">GITHUB</a>
+                        <a href="#">PROJETO</a>
                     </div>
                 </div>
-                <div class="card-pjt">
-                    <p><SPAN>PROJETO LANDING PAGE NARUTO</SPAN></p>
-                    <img src="Captura de tela 2023-11-06 191403.png" alt="" class="ft-pj">
-                    <p>Projeto de uma landing page de naruto, para botar meus conhechecimentos novos em pratica, como flex-box e javascript</p>
-                    <p>TECNOLOGIAS UTILIZADAS:</p>
-                    <p>
-                        <img src="html-svgrepo-com.svg" alt="">
-                        <img src="css-3-svgrepo-com.svg" alt="">
-                        <img src="javascript-svgrepo-com.svg" alt="">
-                    </p>
-                    <div class="links-card">
-                        <a href="https://github.com/MarceloAugusto33/PROJETO-NARUTO" target="_blank"><button>GITHUB</button></a>
-                        <a href="https://marceloaugusto33.github.io/PROJETO-NARUTO/" target="_blank"><button>PROJETO</button></a>
+                <div class="card">
+                    <h2>BUSCAR ENDEREÇO CEP</h2>
+                    <img src="src/img/projeto-cep.png" alt="">
+                    <p>Projeto De um website pegando dados de um api e mostrando o endereço, proposto pelo professor Mauricio na UNAMA.</p>
+                    <div class="botoes-projeto">
+                        <a href="#">GITHUB</a>
+                        <a href="#">PROJETO</a>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="main-habilidades">
-            <h2><span>Habilidades</span></h2>
-            <section id="hab-flex">
-                <div class="card-hab"><img src="html-5-svgrepo-com (1).svg" alt="FOTO HTML"></div>
-                <div class="card-hab"><img src="css3 - habilidades.svg" alt="FOTO CSS"></div>
-                <div class="card-hab"><img src="js - habilidadades.svg" alt="FOTO JAVASCRIPT"></div>
-                <div class="card-hab"><img src="postgresql-habilidades.svg" alt="FOTO POSTGRESQL"></div>
-                <div class="card-hab"><img src="node - habilidades.svg" alt="FOTO NODEJS"></div>
-                <div class="card-hab"><img src="bootstrap - habilidades.svg" alt=" FOTO BOOTSTRAP"></div>
-                <div class="card-hab"><img src="python - habilidades.svg" alt="FOTO PYTHON"></div>
-                <div class="card-hab"><img src="github - habilidades.svg" alt="FOTO GITHUB"></div>
-            </section>
-        </section>
-    </main>
+            <h1 id="link-habilidades">Habilidades</h1>
+            <div class="container-habilidades">
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-html.svg" alt="">
+                    <h3>HTML</h3>
+                </div>
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-CSS.svg" alt="">
+                    <h3>CSS</h3>
+                </div>
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-js.svg" alt="">
+                    <h3>JAVASCRIPT</h3>
+                </div>
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-nodejs.svg" alt="">
+                    <h3>NODE JS</h3>
+                </div>
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-git.svg" alt="">
+                    <h3>GIT</h3>
+                </div>
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-github.svg" alt="">
+                    <h3>GITHUB</h3>
+                </div>
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-postgres.svg" alt="">
+                    <h3>POSTGRESQL</h3>
+                </div>
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-bootstrap.svg" alt="">
+                    <h3>BOOTSTRAP</h3>
+                </div>
+            </div>
+            <h1>Estudando</h1>
+            <div class="container-habilidades">
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-react.svg" alt="">
+                    <h3>REACT</h3>
+                </div>
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-sass.svg" alt="">
+                    <h3>SASS</h3>
+                </div>
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-php.svg" alt="">
+                    <h3>PHP</h3>
+                </div>
+                <div class="card-habilidade">
+                    <img src="src/icons/icon-tailwind.svg" alt="">
+                    <h3>TAILWINDCSS</h3>
+                </div>
+            </div>
+
+
+            
+        </main>
+    </section>
     <footer>
-        <div id="contatos">
-            <p>EMAIL para contato: sjsjsjmarcelo@gmail.com</p>
-            <p>Site criado por Marcelo Augusto</p>
-        </div>
-        <div id="contatos-img">
-            <a href="https://www.linkedin.com/in/marcelo-augusto-8bb411271" target="_blank"><img src="linkedin-svgrepo-com (2).svg" alt="FOTO DO LINKEDIN"></a>
-            <a href="https://github.com/MarceloAugusto33" target="_blank"><img src="github - habilidades.svg" alt="FOTO DO GITHUB"></a>
-        </div>
+        <h1>Email para contato: <a href="mailto:sjsjsjmarcelo@gmail.com">sjsjsjmarcelo@gmail.com</a></h1>
+        <h1>Site criado por marcelo augusto</h1>
     </footer>
-    <script>document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-    
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-    
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 90 /* altura do seu menu fixo */,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });</script>
-    <script>
-        function menu() {
-            let menu = document.querySelector('.menu-mobile');
-            if (menu.classList.contains('open')) {
-                menu.classList.remove('open');
-                document.querySelector('.icon').src = "menu_white_36dp (1).svg"
-            } else {
-                menu.classList.add('open')
-                document.querySelector('.icon').src = "close_white_36dp.svg"
-            }
-        }
-    </script>
+    <script src="src/js/portifolio.js"></script>
 </body>
 </html>
