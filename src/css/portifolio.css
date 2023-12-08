@@ -34,6 +34,10 @@ header{
     text-decoration: none;
     color: white;
 }
+.nav-item > a:hover{
+    color: #9340FF;
+    text-decoration: underline;
+}
 .flex-container{
     display: flex;
     justify-content: center;
@@ -46,7 +50,7 @@ header{
     flex-direction: column;
     position: sticky;
     left: 0;
-    top: 100px;
+    top: 150px;
     height: 100%;
 }
 .foto{
@@ -135,7 +139,7 @@ header{
 .card > p{
     margin: 20px 0px;
     font-size: 1.2rem;
-    text-indent: 40px;
+    padding: 1rem;
 }
 .botoes-projeto{
     display: flex;
