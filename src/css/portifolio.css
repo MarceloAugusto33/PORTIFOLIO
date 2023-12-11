@@ -16,6 +16,7 @@ header{
     position: sticky;
     left: 0;
     top: 0;
+    z-index: 2;
 }
 .nav-bar{
     display: flex;
@@ -43,6 +44,7 @@ header{
     justify-content: center;
     margin: 20px 0px;
     gap: 1%;
+    padding: 1rem;
 }
 .container-perfil{
     width: 20%;
@@ -98,6 +100,10 @@ header{
 }
 .social-botoes > a:hover{
     background-color: #9340FF;
+}
+#btn-linkedin:hover{
+    background-color: #0e76a8;
+    border-color: #0e76a8;
 }
 .container-portifolio{
     width: 55%;
@@ -327,6 +333,9 @@ footer > h1{
         right: 45px;
         font-size: 60px;
         color: white;
+    }
+    .foto > img{
+        width: 70%;
     }
 
 }
