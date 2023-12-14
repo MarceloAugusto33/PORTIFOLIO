@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/portifolio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <title>Portifolio Marcelo</title>
 </head>
 <body>
     <div class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content" id="sair">
-            <a href="#">Inicio</a>
-            <a href="#link-sobre">Sobre</a>
-            <a href="#link-projetos">Projetos</a>
-            <a href="#link-habilidades">Habilidades</a>
+            <a href="#">INICIO</a>
+            <a href="#link-sobre">SOBRE</a>
+            <a href="#link-projetos">PROJETOS</a>
+            <a href="#link-habilidades">HABILIDADES</a>
+            <a href="src/curriculo/CV_MARCELO_AUGUSTO.pdf" download="CV_MARCELO_AUGUSTO.pdf">BAIXAR CV</a>
         </div>
     </div>
     <header>
        <nav class="nav-bar">
             <div class="logo">
-                <h1>Portifolio</h1>
+                <h1>PORTIFOLIO</h1>
             </div>
             <div class="nav">
                 <ul>
-                    <li class="nav-item"><a href="#">Inicio</a></li>
-                    <li class="nav-item"><a href="#link-sobre">Sobre</a></li>
-                    <li class="nav-item"><a href="#link-projetos">Projetos</a></li>
-                    <li class="nav-item"><a href="#link-habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a href="#">INICIO</a></li>
+                    <li class="nav-item"><a href="#link-sobre">SOBRE</a></li>
+                    <li class="nav-item"><a href="#link-projetos">PROJETOS</a></li>
+                    <li class="nav-item"><a href="#link-habilidades">HABILIDADES</a></li>
                 </ul>
+            </div>
+            <div class="curriculo">
+                <a href="src/curriculo/CV_MARCELO_AUGUSTO.pdf" id="cv" download="CV_MARCELO_AUGUSTO.pdf"><button>BAIXAR CV</button></a>
             </div>
             <div class="nav-mobile" onclick="openNav()">
                 <img src="src/icons/menu-svgrepo-com.svg" alt="ICON MENU">
@@ -51,7 +56,7 @@
             </div>
         </article>
         <main class="container-portifolio">
-            <h1 id="link-sobre">Sobre mim</h1>
+            <h1 id="link-sobre">SOBRE MIM</h1>
             <p>
                 Meu nome é Marcelo Augusto tenho 18 anos e sou apaixonado por tecnologia desde criança, Meu primeiro contato com a programação foi com C# em 2020, enquanto ainda estava no ensino medio. Apesar de ter gostado da area, comecei a dar o devido foco em 2023 quando entrei na UNAMA para fazer ADS.
             </p> 
@@ -61,8 +66,8 @@
             <p>
                 Hoje eu ja entendo Tecnologias voltadas para front-end e tambem gosto de "Brincar" com minhas habilidades para criar telas para projetos pessoais e familiares.
             </p>
-            <h1>Projetos</h1>
-            <div class="container-projeto" id="link-projetos">
+            <h1 id="link-projetos">PROJETOS</h1>
+            <div class="container-projeto">
                 <div class="card">
                     <h2>Calculadora Virtual</h2>
                     <img src="src/img/projeto-calculadora.png" alt="IMAGEM DO PROJETO DA CALUCLADORA">
@@ -91,7 +96,7 @@
                     </div>
                 </div>
             </div>
-            <h1 id="link-habilidades">Habilidades</h1>
+            <h1 id="link-habilidades">HABILIDADES</h1>
             <div class="container-habilidades">
                 <div class="card-habilidade">
                     <img src="src/icons/icon-html.svg" alt="ICONE HTML">
@@ -126,7 +131,7 @@
                     <h3>BOOTSTRAP</h3>
                 </div>
             </div>
-            <h1>Estudando</h1>
+            <h1>ESTUDANDO</h1>
             <div class="container-habilidades">
                 <div class="card-habilidade">
                     <img src="src/icons/icon-react.svg" alt="ICONE REACT">
@@ -145,14 +150,18 @@
                     <h3>TAILWINDCSS</h3>
                 </div>
             </div>
-
-
-            
         </main>
     </section>
+    <a href="#" id="btn-topo"><span class="material-symbols-outlined">expand_less</span></a>
     <footer>
+        <div class="links">
+            <h1>links Uteis</h1>
+            <h2><a href="https://www.linkedin.com/in/marcelo-augusto-8bb411271/" target="_blank">linkedin</a></h2>
+            <h2><a href="https://github.com/MarceloAugusto33" target="_blank">github</a></h2>
+            <h2><a href="#" target="_blank">curriculo</a></h2>
+        </div>
         <h1>Email para contato: <a href="mailto:sjsjsjmarcelo@gmail.com" target="_blank">sjsjsjmarcelo@gmail.com</a></h1>
-        <h1>Site criado por marcelo augusto</h1>
+        <h1>Site criado por Marcelo Augusto</h1>
     </footer>
     <script src="src/js/portifolio.js"></script>
 </body>
