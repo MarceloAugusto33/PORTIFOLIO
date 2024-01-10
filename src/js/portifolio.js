@@ -1,33 +1,35 @@
-let pointer = document.querySelector('.pointer')
+import Nav from "./Nav.js"
 
-let body = document.querySelector('body')
+const body = document.querySelector('body')
+const links = document.querySelector("#sair")
+const btnTopo = document.querySelector('#btn-topo')
+const menuMobile = document.querySelector('.overlay');
+const buttonCloseNav = document.querySelector('.closebtn');
+const buttonOpenNav = document.querySelector('.nav-mobile');
+const nav = Nav({
+    body,
+    menuMobile
+})
 
-let links = document.querySelector("#sair")
 
-let btnTopo = document.querySelector('#btn-topo')
 
-function openNav(){
-    document.querySelector('.overlay').style.width = "100%"
-    body.style.overflowY = "hidden"
-}
-function closeNav(){
-    document.querySelector('.overlay').style.width = "0%"
-    body.style.overflowY = "scroll"
-}
+buttonCloseNav.addEventListener('click', nav.close);
+buttonOpenNav.addEventListener('click', nav.open);
 
-links.addEventListener('click',function(){
-    setTimeout(function() {
+links.addEventListener('click', function () {
+    setTimeout(function () {
         document.querySelector('.overlay').style.width = "0%"
         body.style.overflowY = "scroll"
-    },200)
+    }, 200)
 })
 
 document.addEventListener('scroll', () => {
     let topo = scrollY
 
     if (topo < 200) {
-        btnTopo.style.right = '-100px' 
-    } else{
-        btnTopo.style.right = '10px' 
+        btnTopo.style.right = '-100px'
+    } else {
+        btnTopo.style.right = '10px'
     }
 })
+

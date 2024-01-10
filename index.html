@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/portifolio.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <title>Portifolio Marcelo</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="src/css/portifolio.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 </head>
+
 <body>
     <div class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -15,11 +21,11 @@
             <a href="#link-sobre">SOBRE</a>
             <a href="#link-projetos">PROJETOS</a>
             <a href="#link-habilidades">HABILIDADES</a>
-            <a href="src/curriculo/CV_MARCELO_AUGUSTO.pdf" download="CV_MARCELO_AUGUSTO.pdf">BAIXAR CV</a>
+            <a href="src/doc/CV_MARCELO_AUGUSTO.pdf" download="CV_MARCELO_AUGUSTO.pdf">BAIXAR CV</a>
         </div>
     </div>
     <header>
-       <nav class="nav-bar">
+        <nav class="nav-bar">
             <div class="logo">
                 <h1>PORTIFOLIO</h1>
             </div>
@@ -32,12 +38,13 @@
                 </ul>
             </div>
             <div class="curriculo">
-                <a href="src/curriculo/CV_MARCELO_AUGUSTO.pdf" id="cv" download="CV_MARCELO_AUGUSTO.pdf"><button>BAIXAR CV</button></a>
+                <a href="src/doc/CV_MARCELO_AUGUSTO.pdf" id="cv" download="CV_MARCELO_AUGUSTO.pdf"><button>BAIXAR
+                        CV</button></a>
             </div>
             <div class="nav-mobile" onclick="openNav()">
                 <img src="src/icons/menu-svgrepo-com.svg" alt="ICON MENU">
             </div>
-       </nav>
+        </nav>
     </header>
     <section class="flex-container">
         <article class="container-perfil">
@@ -49,7 +56,8 @@
                 <h2>Marcelo Augusto</h2>
                 <p>Desenvolvedor <span>Front-end</span></p>
                 <div class="social-botoes">
-                    <a href="https://www.linkedin.com/in/marcelo-augusto-8bb411271/" target="_blank" id="btn-linkedin">Linkedin</a>
+                    <a href="https://www.linkedin.com/in/marcelo-augusto-8bb411271/" target="_blank"
+                        id="btn-linkedin">Linkedin</a>
                     <a href="https://github.com/MarceloAugusto33" target="_blank" id="btn-github">Github</a>
                 </div>
 
@@ -58,20 +66,23 @@
         <main class="container-portifolio">
             <h1 id="link-sobre">SOBRE MIM</h1>
             <p>
-                Meu nome é Marcelo Augusto tenho 18 anos e sou apaixonado por tecnologia desde criança, Meu primeiro contato com a programação foi com C# em 2020, enquanto ainda estava no ensino medio. Apesar de ter gostado da area, comecei a dar o devido foco em 2023 quando entrei na UNAMA para fazer ADS.
-            </p> 
-            <p>
-                Estou estudando todos os dias há 4 meses e estou aprimorando as minhas habilidades e minha comunicaçao, atualmente estou fazendo cursos online de front-end e back-end.
+                Meu nome é Marcelo Augusto tenho 18 anos e sou apaixonado por tecnologia desde criança, Meu primeiro
+                contato com a programação foi com C# em 2020, enquanto ainda estava no ensino medio. Apesar de ter
+                gostado da area, comecei a dar o devido foco em 2023 quando entrei na UNAMA para fazer ADS.
             </p>
             <p>
-                Hoje eu ja entendo Tecnologias voltadas para front-end e tambem gosto de "Brincar" com minhas habilidades para criar telas para projetos pessoais e familiares.
+                Estou estudando todos os dias há 4 meses e estou aprimorando as minhas habilidades e minha comunicaçao,
+                atualmente estou fazendo cursos online de front-end e back-end.
+            </p>
+            <p>
+                Hoje eu ja entendo Tecnologias voltadas para front-end e tambem gosto de "Brincar" com minhas
+                habilidades para criar telas para projetos pessoais e familiares.
             </p>
             <h1 id="link-projetos">PROJETOS</h1>
             <div class="container-projeto">
                 <div class="card">
                     <h2>E-COMMERCE</h2>
-                    <img src="src/img/PROJETO_ECOMMERCE.png" alt="IMAGEM DO PROJETO E-COMMERCE">
-                    <p>Desenvolvi um projeto de e-commerce utilizando JavaScript, HTML e CSS, integrando a funcionalidade de carrinho de compras com armazenamento local (localStorage). Essa solução proporciona uma experiência de compra eficiente, permitindo aos usuários adicionar produtos ao carrinho.</p>
+                    <img src="src/img/PROJETO_ECOMMERCE.png" alt="IMAGEM DO PROJETO E-COMMERCE" class="img-projeto">
                     <div class="botoes-projeto">
                         <a href="https://github.com/MarceloAugusto33/PROJETO-ECOMMERCE" target="_blank">GITHUB</a>
                         <a href="https://marceloaugusto33.github.io/PROJETO-ECOMMERCE/" target="_blank">PROJETO</a>
@@ -80,7 +91,6 @@
                 <div class="card">
                     <h2>Calculadora Virtual</h2>
                     <img src="src/img/CAPA_CALCULADORA.png" alt="IMAGEM DO PROJETO DA CALUCLADORA">
-                    <p>Esse projeto é uma calculadora simples totalmente funcional criada com HTML, CSS e JavaScript. Este projeto foi concebido como parte do meu aprendizado contínuo em JavaScript e para aprimorar minhas habilidades de desenvolvimento front-end.</p>
                     <div class="botoes-projeto">
                         <a href="https://github.com/MarceloAugusto33/PROJETO-CALCULADORA" target="_blank">GITHUB</a>
                         <a href="https://marceloaugusto33.github.io/PROJETO-CALCULADORA/" target="_blank">PROJETO</a>
@@ -89,7 +99,6 @@
                 <div class="card">
                     <h2>Lista de Tarefas</h2>
                     <img src="src/img/PROJETO-TODOLIST.png" alt="IMAGEM DO PROJETO DA LISTA DE TAREFAS">
-                    <p>Criei um projeto de lista de tarefas utilizando HTML, CSS e JavaScript, com suporte de armazenamento local (localStorage). Os usuários podem adicionar, editar e remover tarefas, proporcionando uma experiência de gerenciamento de tarefas flexível e intuitiva.</p>
                     <div class="botoes-projeto">
                         <a href="https://github.com/MarceloAugusto33/PROJETO-TODOLIST" target="_blank">GITHUB</a>
                         <a href="https://marceloaugusto33.github.io/PROJETO-TODOLIST/" target="_blank">PROJETO</a>
@@ -98,7 +107,6 @@
                 <div class="card">
                     <h2>Landing Page naruto</h2>
                     <img src="src/img/projeto-naruto.png" alt="IMAGEM DA LANDING PAGE NARUTO">
-                    <p>Projeto de uma landing page de naruto, para botar meus conhechecimentos novos em pratica, como flex-box e javascript.</p>
                     <div class="botoes-projeto">
                         <a href="https://github.com/MarceloAugusto33/PROJETO-NARUTO" target="_blank">GITHUB</a>
                         <a href="https://marceloaugusto33.github.io/PROJETO-NARUTO/" target="_blank">PROJETO</a>
@@ -167,11 +175,14 @@
             <h1>links Uteis</h1>
             <h2><a href="https://www.linkedin.com/in/marcelo-augusto-8bb411271/" target="_blank">linkedin</a></h2>
             <h2><a href="https://github.com/MarceloAugusto33" target="_blank">github</a></h2>
-            <h2><a href="src/curriculo/CV_MARCELO_AUGUSTO.pdf" download="CV_MARCELO_AUGUSTO.pdf" target="_blank">curriculo</a></h2>
+            <h2><a href="src/doc/CV_MARCELO_AUGUSTO.pdf" download="CV_MARCELO_AUGUSTO.pdf"
+                    target="_blank">curriculo</a></h2>
         </div>
-        <h1>Email para contato: <a href="mailto:sjsjsjmarcelo@gmail.com" target="_blank">sjsjsjmarcelo@gmail.com</a></h1>
-        <h1>Site criado por Marcelo Augusto</h1>
+        <h1>Email para contato: <a href="mailto:sjsjsjmarcelo@gmail.com" target="_blank">sjsjsjmarcelo@gmail.com</a>
+        </h1>
+        <h1>By <span>Marcelo Augusto</span></h1>
     </footer>
-    <script src="src/js/portifolio.js"></script>
+    <script type="module" src="src/js/portifolio.js"></script>
 </body>
+
 </html>

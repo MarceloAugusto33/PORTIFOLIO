@@ -1,55 +1,71 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
     scrollbar-color: #9340FF #13151b;
     scrollbar-width: thin;
 }
-body{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #13151b;
     color: white;
+    animation: showPage .7s ease-in-out;
 }
+
 body::-webkit-scrollbar {
     width: 10px;
-    
 }
+
 body::-webkit-scrollbar-thumb {
     background-color: #9340FF;
     border-radius: 12px;
 }
+
 body::-webkit-scrollbar-track {
     background-color: #13151b;
 }
-header{
+
+header {
     background-color: rgb(24, 26, 26);
     z-index: 2;
 }
-.nav-bar{
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 6rem;
 }
-.nav > ul{
+
+.nav>ul {
     display: flex;
 }
-.nav > ul > li{
+
+.nav>ul>li {
     margin: 0px 20px;
     list-style: none;
 }
-.nav-item > a{
+
+.nav-item>a {
     text-decoration: none;
     color: white;
 }
-.nav-item > a:hover{
+
+.nav-item>a:hover {
     color: #9340FF;
     text-decoration: underline;
 }
-#cv > button{
+
+#cv>button {
     height: 40px;
     width: 100px;
     border: 1px solid #9340FF;
@@ -57,21 +73,25 @@ header{
     color: white;
     cursor: pointer;
 }
-.curriculo{
+
+.curriculo {
     display: block;
     transition: all 0.3s;
 }
-.curriculo:hover{
+
+.curriculo:hover {
     background-color: #9340FF;
 }
-.flex-container{
+
+.flex-container {
     display: flex;
     justify-content: center;
     margin: 20px 0px;
     gap: 1%;
     padding: 1rem;
 }
-.container-perfil{
+
+.container-perfil {
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -80,16 +100,21 @@ header{
     top: 150px;
     height: 100%;
 }
-.foto{
+
+.foto {
     width: 100%;
+
 }
-.foto > img{
+
+.foto>img {
     width: 90%;
     display: block;
     margin: auto;
     border-radius: 50%;
+    animation: keyLeft 0.7s ease-in;
 }
-.dados{
+
+.dados {
     margin-top: 10px;
     width: 100%;
     padding: 1rem;
@@ -97,22 +122,28 @@ header{
     flex-direction: column;
     justify-content: center;
 }
-.dados > p {
+
+.dados>p {
     font-size: 1.5em
 }
-.dados > h2{
+
+.dados>h2 {
     font-size: 2em;
 }
-.dados > p > span{
+
+.dados>p>span {
     color: #9340FF;
+    animation: colorGenerator .7s infinite linear;
 }
-.social-botoes{
+
+.social-botoes {
     margin: 20px 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.social-botoes > a{
+
+.social-botoes>a {
     width: 45%;
     padding: 1rem;
     border: 1px solid #9340FF;
@@ -123,33 +154,41 @@ header{
     color: white;
     transition: all 0.4s;
 }
-.social-botoes > a:hover{
+
+.social-botoes>a:hover {
     background-color: #9340FF;
 }
-#btn-linkedin:hover{
+
+#btn-linkedin:hover {
     background-color: #0e76a8;
     border-color: #0e76a8;
 }
-.container-portifolio{
+
+.container-portifolio {
     width: 55%;
+    animation: keyRight 0.7s ease-in;
 }
-.container-portifolio > h1{
+
+.container-portifolio>h1 {
     text-align: center;
     color: #9340FF;
     font-size: 2.5em;
     margin: 20px 0px 30px 0px;
 }
-.container-portifolio > p{
+
+.container-portifolio>p {
     font-size: 1.2rem;
     text-indent: 40px;
     margin: 30px auto;
     width: 70%;
 }
-.container-projeto{
+
+.container-projeto {
     display: flex;
     flex-direction: column;
 }
-.card{
+
+.card {
     width: 70%;
     margin: 40px auto;
     background-color: rgb(34, 32, 32);
@@ -157,27 +196,32 @@ header{
     box-shadow: 3px 4px 0px#9340ff;
 
 }
-.card > h2{
+
+.card>h2 {
     text-align: center;
     margin: 20px 0px;
 }
-.card > img{
+
+.card>img {
     width: 90%;
     display: block;
     margin: auto;
     border-radius: 15px;
 }
-.card > p{
+
+.card>p {
     margin: 20px 0px;
     font-size: 1.2rem;
     padding: 1rem;
 }
-.botoes-projeto{
+
+.botoes-projeto {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.botoes-projeto > a{
+
+.botoes-projeto>a {
     width: 30%;
     padding: 1rem;
     border: 2px solid #9340FF;
@@ -190,17 +234,20 @@ header{
     color: white;
     transition: all 0.3s;
 }
-.botoes-projeto > a:hover{
+
+.botoes-projeto>a:hover {
     background: #9340FF;
 }
-.container-habilidades{
+
+.container-habilidades {
     display: flex;
     flex-wrap: wrap;
     gap: 1%;
     align-items: center;
     justify-content: center;
 }
-.card-habilidade{
+
+.card-habilidade {
     width: 200px;
     height: 200px;
     border: 1px solid rgba(255, 255, 255, 0.304);
@@ -210,28 +257,34 @@ header{
     justify-content: center;
     margin: 10px 0px;
 }
-.card-habilidade > img{
+
+.card-habilidade>img {
     height: 150px;
     padding: 0.6rem;
 }
-footer{
+
+footer {
     background-color: rgb(24, 26, 26);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-footer > h1{
+
+footer>h1 {
     margin: 20px 0px;
     font-size: 1.5em;
 }
-.nav-mobile{
+
+.nav-mobile {
     display: none;
 }
-.overlay{
+
+.overlay {
     display: block;
 }
-.overlay{
+
+.overlay {
     width: 0;
     height: 100%;
     background-color: #9340FF;
@@ -242,32 +295,38 @@ footer > h1{
     overflow-x: hidden;
     transition: all 0.5s;
 }
-.overlay-content{
+
+.overlay-content {
     position: relative;
-    top:25%;
+    top: 25%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
 
 }
-.overlay-content a{
+
+.overlay-content a {
     padding: 8px;
     text-decoration: none;
     color: white;
     display: block;
     font-size: 25px;
 }
-.overlay a:hover, .overlay a:focus{
+
+.overlay a:hover,
+.overlay a:focus {
     color: rgb(166, 166, 166);
 }
-.overlay .closebtn{
+
+.overlay .closebtn {
     position: absolute;
     top: 4%;
     right: 45px;
     font-size: 60px;
     color: white;
 }
-#btn-topo{
+
+#btn-topo {
     width: 60px;
     height: 60px;
     position: fixed;
@@ -280,44 +339,54 @@ footer > h1{
     justify-content: center;
     border-radius: 50%;
     text-decoration: none;
-    transition: all 0.3s ;
+    transition: all 0.3s;
 }
-footer h1{
+
+footer h1 {
     color: #0766fe;
     text-align: center;
     margin: 20px 0px;
     font-size: 1.4rem;
 }
-footer h2{
+
+footer h2 {
     margin: 15px 0px;
     font-size: 1.1rem;
     text-align: center;
 }
-footer a{
+
+footer a {
     text-decoration: none;
     color: white;
 }
-footer a:hover{
+
+footer a:hover {
     text-decoration: underline;
     color: rgb(122, 122, 122);
 }
-@media screen and (max-width:1000px){
-    .nav-bar{
+
+
+@media screen and (max-width:1000px) {
+    .nav-bar {
         padding: 1.5rem;
     }
-    .nav-mobile > img{
+
+    .nav-mobile>img {
         width: 100%;
         height: 30px;
         cursor: pointer;
     }
-    .nav-mobile{
+
+    .nav-mobile {
         display: block;
     }
-    .flex-container{
+
+    .flex-container {
         display: flex;
         flex-direction: column;
     }
-    .container-perfil{
+
+    .container-perfil {
         top: 0;
         width: 100%;
         position: static;
@@ -326,38 +395,48 @@ footer a:hover{
         align-items: center;
         justify-content: center;
     }
-    .container-portifolio{
+
+    .container-portifolio {
         width: 100%;
         height: auto;
     }
-    .nav{
+
+    .nav {
         display: none;
     }
-    .container-portifolio > p{
+
+    .container-portifolio>p {
         width: 90%;
         text-indent: 0;
     }
-    .card{
+
+    .card {
         width: 90%;
     }
-    .card > p {
+
+    .card>p {
         text-indent: 0;
         padding: 1rem;
     }
-    .card-habilidade{
+
+    .card-habilidade {
         width: 120px;
         height: 150px;
     }
-    .card-habilidade > img{
+
+    .card-habilidade>img {
         width: 100%;
     }
-    .card-habilidade > h3{
+
+    .card-habilidade>h3 {
         font-size: 1rem;
     }
-    footer h1{
+
+    footer h1 {
         text-align: center;
     }
-    .overlay{
+
+    .overlay {
         width: 0;
         height: 100%;
         background-color: #9340FF;
@@ -368,42 +447,98 @@ footer a:hover{
         overflow-x: hidden;
         transition: all 0.5s;
     }
-    .overlay-content{
+
+    .overlay-content {
         position: relative;
-        top:25%;
+        top: 25%;
         width: 100%;
         text-align: center;
         margin-top: 30px;
-    
+
     }
-    .overlay-content a{
+
+    .overlay-content a {
         padding: 8px;
         text-decoration: none;
         color: white;
         display: block;
         font-size: 25px;
     }
-    .overlay a:hover, .overlay a:focus{
+
+    .overlay a:hover,
+    .overlay a:focus {
         color: rgb(166, 166, 166);
     }
-    .overlay .closebtn{
+
+    .overlay .closebtn {
         position: absolute;
         top: 4%;
         right: 45px;
         font-size: 60px;
         color: white;
     }
-    .foto > img{
+
+    .foto>img {
         width: 70%;
     }
-    .curriculo{
+
+    .curriculo {
         display: none;
     }
-    #btn-topo{
+
+    #btn-topo {
         width: 50px;
         height: 50px;
     }
 
 }
 
+@keyframes keyLeft {
+    0% {
+        opacity: 0%;
+        transform: translateX(-30px);
+    }
 
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes keyRight {
+    0% {
+        opacity: 0%;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes colorGenerator {
+    0% {
+        color: #9340FF;
+    }
+
+    50% {
+        color: #5002eb;
+    }
+
+    100% {
+        color: #a467f4;
+    }
+}
+
+@keyframes showPage {
+    0% {
+        opacity: 0%;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
