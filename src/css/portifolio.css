@@ -14,7 +14,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #13151b;
     color: white;
-    animation: showPage .7s ease-in-out;
 }
 
 body::-webkit-scrollbar {
@@ -33,6 +32,7 @@ body::-webkit-scrollbar-track {
 header {
     background-color: rgb(24, 26, 26);
     z-index: 2;
+    animation: showPage .7s ease-in-out;
 }
 
 a {
@@ -111,7 +111,7 @@ a {
     display: block;
     margin: auto;
     border-radius: 50%;
-    animation: keyLeft 0.7s ease-in;
+    animation: keyDown 1s ease-in;
 }
 
 .dados {
@@ -166,7 +166,7 @@ a {
 
 .container-portifolio {
     width: 55%;
-    animation: keyRight 0.7s ease-in;
+    animation: keyDown 1s ease-in;
 }
 
 .container-portifolio>h1 {
@@ -493,29 +493,18 @@ footer a:hover {
 
 }
 
-@keyframes keyLeft {
+@keyframes keyDown {
     0% {
         opacity: 0%;
-        transform: translateX(-30px);
+        transform: translateY(-30px);
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
-@keyframes keyRight {
-    0% {
-        opacity: 0%;
-        transform: translateX(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 @keyframes colorGenerator {
     0% {

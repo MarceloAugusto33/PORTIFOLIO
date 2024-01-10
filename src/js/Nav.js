@@ -1,3 +1,5 @@
+//Função de abrir o menu mobile
+
 export default function Nav({
     body,
     menuMobile
