@@ -5,7 +5,7 @@ export default function Nav({
     menuMobile
 }) { 
     function open(){
-        menuMobile.style.width = "100%"
+        menuMobile.style.width = "70%"
         body.style.overflowY = "hidden"
     }
     function close(){

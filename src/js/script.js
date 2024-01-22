@@ -1,9 +1,9 @@
 import Nav from "./Nav.js";
 
 const body = document.querySelector('body');
-const links = document.querySelector("#sair");
+const links = document.querySelector(".menu-mobile ul");
 const buttonToTopPage = document.querySelector('#btn-topo');
-const menuMobile = document.querySelector('.overlay');
+const menuMobile = document.querySelector('.menu-mobile');
 const buttonCloseNav = document.querySelector('.closebtn');
 const buttonOpenNav = document.querySelector('.nav-mobile');
 const nav = Nav({
@@ -18,7 +18,7 @@ buttonOpenNav.addEventListener('click', nav.open);
 //Função para quando o usuario clicar no link do menu de mobile, o menu se fechar
 links.addEventListener('click', function () {
     setTimeout(function () {
-        document.querySelector('.overlay').style.width = "0%"
+        menuMobile.style.width = "0%"
         body.style.overflowY = "scroll"
     }, 200)
 })
