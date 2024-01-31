@@ -32,7 +32,6 @@ body::-webkit-scrollbar-track {
 header {
     background-color: rgb(24, 26, 26);
     z-index: 2;
-    animation: showPage .7s ease-in-out;
 }
 
 a {
@@ -120,10 +119,9 @@ a {
 
 .flex-container {
     display: flex;
-    justify-content: center;
     margin: 20px 0px;
-    gap: 1%;
-    padding: 1rem;
+    gap: 5%;
+    padding: 1rem 6rem;
 }
 
 .container-perfil {
@@ -138,7 +136,6 @@ a {
 
 .foto {
     width: 100%;
-
 }
 
 .foto>img {
@@ -146,7 +143,6 @@ a {
     display: block;
     margin: auto;
     border-radius: 50%;
-    animation: keyDown 1s ease-in;
 }
 
 .dados {
@@ -168,7 +164,6 @@ a {
 
 .dados>p>span {
     color: #9340FF;
-    animation: colorGenerator .7s infinite linear;
 }
 
 .social-botoes {
@@ -200,8 +195,7 @@ a {
 }
 
 .container-portifolio {
-    width: 55%;
-    animation: keyDown 1s ease-in;
+    flex: 2;
 }
 
 .container-portifolio>h1 {
@@ -223,84 +217,77 @@ a {
     flex-direction: column;
 }
 
-.card {
-    width: 70%;
-    margin: 40px auto;
-    background-color: rgb(34, 32, 32);
-    border-radius: 12px;
-    box-shadow: 3px 4px 0px#9340ff;
-    padding: 1rem 2rem;
-
+.container-projeto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 20px;
 }
 
-.card>h2 , .card > h3 {
-    text-align: center;
-    margin: 20px 0px;
+.card__projeto {
+    background: #181a21;
+    border: 1px solid rgb(222, 222, 222);
 }
 
-.card>img {
+.card__projeto:hover {
+    border: 1px solid rgb(255, 251, 251);
+}
+
+.card__projeto img {
     width: 100%;
-    display: block;
-    margin: auto;
-    border-radius: 15px;
 }
 
+.card__projeto h3 {
+    margin: 20px 0 30px;
+    padding: 0 1rem;
+    font-weight: 100;
+    font-size: 1.8rem;
+}
 
-.tecnologias-projeto{
-    margin: 20px 0px;
+.card__projeto .card__container__tecnologias {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 10px;
+    padding: 0 1rem;
+    margin-bottom: 30px;
 }
 
-.tecnologias-projeto img {
-    display: block;
-    width: 40px;
+.card__projeto .card__container__tecnologias span {
+    padding: 0.5rem 1rem;
+    background: #20242d;
+    color: rgb(209, 209, 209);
+    border-radius: 4px;
 }
 
-.tecnologia{
+.card__projeto .card__link__projeto {
+    padding: 0 1rem;
+    margin: 0 0 15px;
+    font-size: 1rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    padding: .5rem 1rem;
-    border-radius: 8px;
-    color: #13151b;
-    box-shadow: 2px 2px 10px #9340ff9a;
 }
 
-.tecnologia span{
-    margin-top: 10px;
-    font-weight: 700;
-}
 
-.botoes-projeto {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10%;
-}
-
-.botoes-projeto>a {
-    width: 50%;
-    padding: 1rem;
-    border: 2px solid #9340FF;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.card__projeto .card__link__projeto a {
     text-decoration: none;
-    margin: 20px 0px;
+    color: rgb(196, 196, 196);
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    gap: 10px;
+    flex: 1;
+    transition: .1s ease;
+}
+
+.card__projeto .card__link__projeto a:hover {
     color: white;
-    transition: all 0.3s;
+    font-size: 1.1rem;
 }
 
-.botoes-projeto>a:hover {
-    background: #9340FF;
-}
 
+
+
+
+/* CONTAINER HABILIDADES*/
 .container-habilidades {
     display: flex;
     flex-wrap: wrap;
@@ -358,14 +345,15 @@ footer>h1 {
     transition: all 0.3s;
 }
 
-footer h1 {
+
+footer h4 {
     color: #0766fe;
     text-align: center;
     margin: 20px 0px;
     font-size: 1.4rem;
 }
 
-footer h2 {
+footer h5 {
     margin: 15px 0px;
     font-size: 1.1rem;
     text-align: center;
@@ -381,6 +369,14 @@ footer a:hover {
     color: rgb(122, 122, 122);
 }
 
+footer p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+footer span {
+    color: white;
+}
 
 @media screen and (max-width:1000px) {
     .menu-mobile {
@@ -404,6 +400,7 @@ footer a:hover {
     .flex-container {
         display: flex;
         flex-direction: column;
+        padding: 1rem 1rem;
     }
 
     .container-perfil {
@@ -511,43 +508,10 @@ footer a:hover {
         height: 50px;
     }
 
-}
-
-@keyframes keyDown {
-    0% {
-        opacity: 0%;
-        transform: translateY(-30px);
+    .container-projeto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes colorGenerator {
-    0% {
-        color: #9340FF;
-    }
-
-    50% {
-        color: #5002eb;
-    }
-
-    100% {
-        color: #a467f4;
-    }
-}
-
-@keyframes showPage {
-    0% {
-        opacity: 0%;
-        transform: translateY(-30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
